@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ExpenseList from "./components/ExpenseList";
+import ExpenseList from "./ExpenseTracker/components/ExpenseList";
 
 function App() {
    const [expenses, setExpenses] = useState([
