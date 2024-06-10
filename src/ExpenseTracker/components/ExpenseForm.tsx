@@ -37,7 +37,7 @@ const ExpenseForm = ({ onSubmit }: Props) => {
 
    return (
       <div className="container">
-         <h1>My Expense tracker</h1>
+         <h1>My Expense tracker 💰</h1>
          <form
             onSubmit={handleSubmit((data) => {
                onSubmit(data);
@@ -64,7 +64,7 @@ const ExpenseForm = ({ onSubmit }: Props) => {
                   Amount:
                </label>
                <input
-                  {...register("amount")}
+                  {...register("amount", { valueAsNumber: true })}
                   id="amount"
                   type="number"
                   className="form-control"
@@ -94,6 +94,9 @@ const ExpenseForm = ({ onSubmit }: Props) => {
                   <p className="text-danger">{errors.category.message}</p>
                )}
             </div>
+            <button className="btn btn-primary" type="submit">
+               Submit
+            </button>
          </form>
       </div>
    );
